@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="target-densitydpi=high-dpi, user-scalable=no" />
+<title>Cordova Sample</title>
+<link href="osp://webapp/css/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+button.btn {
+			color:#050;
+			font: bold 24px 'trebuchet ms',helvetica,sans-serif;
+			background-color:#fed;
+			width: 400px;
+			height: 100px;
+			border: 1px solid;
+			border-color: #696 #363 #363 #696;
+			/* filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#ffffffff',EndColorStr='#ffeeddaa'); */ 
+		  } 
+</style>
+<script type="text/javascript" src="osp://webapp/js/webapp_core.js"> </script>
+<script>
+/*
+	Osp.App.Application.addEventListener("initializing", function()
+	{
+		accelerometer.getCurrentAcceleration(null, null, null);
+		//Osp.Ui.init();
+		//appObj = new TestWeb();
+		//appObj.launch();
+	}, this);
+	
+	*/
+	document.addEventListener("deviceready", function(e) {alert('deviceready')});
+</script>
+</head>
+<body>
+	<ul>
+		<li>
+			<h3>Acceleration</h3>
+			<div>
+				<button type="button" class="btn" onclick="getCurrentAcceleration();">getCurrentAcceleration</button>
+			</div>
+			<div>
+				<button type="button" class="btn" id="accelBtn" onclick="toggleAcceleration();">watchAcceleration</button>
+			</div>
+			<div>
+				<span id="acceleration"></span>
+			</div>
+		</li>
+		<li>
+			<h3>Geolocation</h3>
+			<div>
+				<button type="button" class="btn" onclick="getCurrentPosition();">getCurrentPosition</button>
+			</div>
+			<div>
+				<button type="button" class="btn" id="geoBtn" onclick="togglePosition();">watchPosition</button>
+			</div>
+			<div>
+				<span id="geolocation"></span>
+			</div>
+		</li>
+	</ul>
+<script type="text/javascript" src="./js/accelerometer.js"></script>
+<script type="text/javascript" src="./js/device.js"></script>
+<script type="text/javascript" src="./js/sample.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Application>
+    <Entry>CordovaWAC</Entry>
+    <Name>
+        <English>CordovaWAC</English>
+        <eng-GB>CordovaWAC</eng-GB>
+    </Name>
+    <Vendor/>
+    <Description/>
+    <Icons>
+        <MainMenu>CordovaWAC_type4.png<Type1/>
+            <Type2/>
+            <Type3>CordovaWAC_type3.png</Type3>
+            <Type4>CordovaWAC_type4.png</Type4>
+            <Type5>CordovaWAC_type5.png</Type5>
+        </MainMenu>
+        <Setting/>
+        <Ticker/>
+        <QuickPanel/>
+        <LaunchImage>Splash_type4.png<Type1/>
+            <Type2/>
+            <Type3>Splash_type3.png</Type3>
+            <Type4>Splash_type4.png</Type4>
+            <Type5>Splash_type5.png</Type5>
+        </LaunchImage>
+    </Icons>
+    <AutoScaling>
+        <Enabled>false</Enabled>
+    </AutoScaling>
+</Application>
