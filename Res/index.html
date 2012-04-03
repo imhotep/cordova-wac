@@ -58,8 +58,21 @@ button.btn {
 				<span id="geolocation"></span>
 			</div>
 		</li>
+		<li>
+			<h3>Compass</h3>
+			<div>
+				<button type="button" class="btn" onclick="getCurrentHeading();">getCurrentHeading</button>
+			</div>
+			<div>
+				<button type="button" class="btn" id="compassBtn" onclick="toggleCompass();">watchHeading</button>
+			</div>
+			<div>
+				<span id="heading"></span>
+			</div>
+		</li>
 	</ul>
 <script type="text/javascript" src="./js/accelerometer.js"></script>
+<script type="text/javascript" src="./js/compass.js"></script>
 <script type="text/javascript" src="./js/device.js"></script>
 <script type="text/javascript" src="./js/sample.js"></script>
 </body>

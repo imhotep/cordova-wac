@@ -39,10 +39,9 @@ navigator.accelerometer = {
 				
 				errorCallback(err);
 			};
-			var watchID = deviceapis.accelerometer.watchAcceleration(success, error);
-			return watchID;
+			return deviceapis.accelerometer.watchAcceleration(success, error);
 		},
-		clearWatch: function(watchId) {
-			deviceapis.accelerometer.clearWatch(watchId);
+		clearWatch: function(watchID) {
+			deviceapis.accelerometer.clearWatch(watchID);
 		}
 };

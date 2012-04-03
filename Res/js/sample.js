@@ -105,3 +105,64 @@ function clearPositionWatch() {
 		console.log("clearPositionWatch");
 	}
 }
+
+/*
+ * Compass
+ */
+
+var compassWatchID = null;
+
+function getCurrentHeading() {
+	var successCallback = function(heading) {
+		var headingEm = document.getElementById("heading");
+		headingEm.innerHTML = "magnetic Heading: "+ heading.magneticHeading + 
+		                      " true Heading: " + heading.trueHeading +
+		                      " heading accuracy: " + heading.headingAccuracy +
+		                      " heading timestamp " + heading.timestamp;
+	};
+	
+	var errorCallback = function(error) {
+		console.log(error);
+		var headingEm = document.getElementById("heading");
+		headingEm.innerHTML = "ERROR";
+	};
+	navigator.compass.getCurrentHeading(successCallback, errorCallback);
+}
+
+function toggleCompass() {
+	var geoBtn = document.getElementById("compassBtn");
+	if(geoBtn.innerHTML == "watchHeading") {
+		watchHeading();
+		compassBtn.innerHTML = "clearWatch";
+	} else {
+		clearHeadingWatch();
+		compassBtn.innerHTML = "watchHeading";
+	}
+}
+
+function watchHeading() {
+	var successCallback = function(heading) {
+		console.log("watchHeading::successCallback");
+		var headingEm = document.getElementById("heading");
+		headingEm.innerHTML = "magnetic Heading: "+ heading.magneticHeading + 
+		" true Heading: " + heading.trueHeading +
+		" heading accuracy: " + heading.headingAccuracy +
+		" heading timestamp " + heading.timestamp;
+	};
+	
+	var errorCallback = function(error) {
+		console.log(error);
+		var headingEm = document.getElementById("heading");
+		headingEm.innerHTML = "ERROR";
+	};
+	compassWatchID = navigator.compass.watchHeading(successCallback, errorCallback);
+	console.log("watchHeading "+compassWatchID);
+}
+function clearHeadingWatch() {
+	if(compassWatchID != null) {
+		navigator.compass.clearWatch(compassWatchID);
+		compassWatchID = null;
+		document.getElementById("heading").innerHTML = "";
+		console.log("clearHeadingWatch");
+	}
+}
