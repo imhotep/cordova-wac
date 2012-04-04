@@ -166,3 +166,12 @@ function clearHeadingWatch() {
 		console.log("clearHeadingWatch");
 	}
 }
+
+/*
+ * Connection
+ */
+
+function getConnection() {
+	var connectionEm = document.getElementById("connection");
+	connectionEm.innerHTML = "Connection type "+navigator.network.connection.type;
+}
