@@ -18,6 +18,7 @@ button.btn {
 		  } 
 </style>
 <script type="text/javascript" src="osp://webapp/js/webapp_core.js"> </script>
+<script type="text/javascript" src="osp://webapp/js/webapp_ui.js"> </script>
 <script>
 /*
 	Osp.App.Application.addEventListener("initializing", function()
@@ -79,7 +80,26 @@ button.btn {
 				<span id="connection"></span>
 			</div>
 		</li>
+		<li>
+			<h3>Notifications</h3>
+			<div>
+				<button type="button" class="btn" onclick="notificationAlert();">Alert</button>
+			</div>
+			<div>
+				<button type="button" class="btn" onclick="notificationAlert();">Confirm</button>
+			</div>
+			<div>
+				<button type="button" class="btn" onclick="notificationVibrate();">Vibrate</button>
+			</div>
+			<div>
+				<button type="button" class="btn" onclick="notificationBeep();">Beep</button>
+			</div>
+			<div>
+				<button type="button" class="btn" onclick="notificationLightOn();">Light ON</button>
+			</div>
+		</li>
 	</ul>
+<script type="text/javascript" src="./js/notification.js"></script>
 <script type="text/javascript" src="./js/connection.js"></script>
 <script type="text/javascript" src="./js/accelerometer.js"></script>
 <script type="text/javascript" src="./js/compass.js"></script>

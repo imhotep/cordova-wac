@@ -175,3 +175,27 @@ function getConnection() {
 	var connectionEm = document.getElementById("connection");
 	connectionEm.innerHTML = "Connection type "+navigator.network.connection.type;
 }
+
+/*
+ * Notification
+ */
+
+function notificationAlert() {
+	var notifEm = document.getElementById('result');
+	var alertDismissed = function() {
+		console.log('alertDismissed');
+	};
+	navigator.notification.alert('You are the winner!', alertDismissed, 'Game Over', 'Done');
+}
+
+function notificationVibrate() {
+	navigator.notification.vibrate(2000);
+}
+
+function notificationBeep() {
+	navigator.notification.beep(4, 2000);
+}
+
+function notificationLightOn() {
+	navigator.notification.lightOn(2000);
+}
