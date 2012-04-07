@@ -199,3 +199,7 @@ function notificationBeep() {
 function notificationLightOn() {
 	navigator.notification.lightOn(2000);
 }
+
+function getCameraPreview() {
+	navigator.camera.getPreview();
+}
