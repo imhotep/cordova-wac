@@ -200,6 +200,34 @@ function notificationLightOn() {
 	navigator.notification.lightOn(2000);
 }
 
-function getCameraPreview() {
-	navigator.camera.getPreview();
+function cameraPreview() {
+    var preview = document.getElementById("preview");
+    if(preview.childNodes[0]) {
+    	preview.removeChild(preview.childNodes[0]);
+    	document.getElementById("cameraControls").style.display = "none";
+    } else {
+    	navigator.camera.getPreview();
+    	document.getElementById("cameraControls").style.display = "";
+    }
+}
+
+function startVideoCapture() {
+	var success = function(filename) {console.log(filename); };
+	var fail = function(error) { console.log("ERROR "+JSON.stringify(error)); };
+	navigator.capture.captureVideo(success, fail, {duration: 5000, destinationFilename: "videos/a.3gp"});
+}
+
+function stopVideoCapture() {
+	navigator.capture.stopVideoCapture();
+}
+
+function captureImage() {
+	var success = function(filename) {
+		console.log(filename);
+	};
+	var fail = function(error) {
+		console.log("ERROR"+JSON.stringify(error));
+	};
+	var options = { destinationFilename: "images/cam01.jpg", highRes: false};
+	navigator.capture.captureImage(success, fail, options);
 }

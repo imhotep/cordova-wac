@@ -16,6 +16,17 @@ button.btn {
 			border-color: #696 #363 #363 #696;
 			/* filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#ffffffff',EndColorStr='#ffeeddaa'); */ 
 		  } 
+		  
+		  button.btn2 {
+			color:#050;
+			font: bold 24px 'trebuchet ms',helvetica,sans-serif;
+			background-color:#fed;
+			width: 200px;
+			height: 100px;
+			border: 1px solid;
+			border-color: #696 #363 #363 #696;
+			/* filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#ffffffff',EndColorStr='#ffeeddaa'); */ 
+		  } 
 </style>
 <script type="text/javascript" src="osp://webapp/js/webapp_core.js"> </script>
 <script type="text/javascript" src="osp://webapp/js/webapp_ui.js"> </script>
@@ -101,12 +112,21 @@ button.btn {
 		<li>
 			<h3>Camera</h3>
 			<div>
-				<button type="button" class="btn" onclick="getCameraPreview();">Camera</button>
+				<button type="button" class="btn" onclick="cameraPreview();">cameraPreview</button>
+			</div>
+			<div id="cameraControls" style="display:none;">
+				<span>
+					<button type="button" class="btn2" onclick="startVideoCapture();">startVideoCapture</button>
+					<button type="button" class="btn2" onclick="stopVideoCapture();">stopVideoCapture</button>
+				</span>
+				<div>
+					<button type="button" class="btn" onclick="captureImage();">captureImage</button>
+				</div>
 			</div>
 			<div id="preview"></div>
 		</li>
 	</ul>
-<script type="text/javascript" src="./js/camera.js"></script>
+<script type="text/javascript" src="./js/capture.js"></script>
 <script type="text/javascript" src="./js/notification.js"></script>
 <script type="text/javascript" src="./js/connection.js"></script>
 <script type="text/javascript" src="./js/accelerometer.js"></script>
