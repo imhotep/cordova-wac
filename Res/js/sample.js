@@ -1,3 +1,16 @@
+/*
+ * Device
+ */
+
+function setDeviceInfo() {
+	var deviceInfo = document.getElementById("device");
+	deviceInfo.innerHTML = "device.name: " + device.name +
+	                   "<br />device.cordova: " + device.cordova +
+	                   "<br />device.uuid: " + device.uuid +
+	                   "<br />device.version: " + device.version +
+	                   "<br />device.platform " + device.platform
+	
+}
 
 /*
  * Acceleration
@@ -39,7 +52,7 @@ function watchAcceleration() {
 		console.log(JSON.stringify(error));
 		document.getElementById("acceleration").innerHTML = "ERROR";
 	};
-	accelWatchID = navigator.accelerometer.watchAcceleration(successCallback, errorCallback, null);
+	accelWatchID = navigator.accelerometer.watchAcceleration(successCallback, errorCallback, {frequency: 1000});
 	console.log("watchAcceleration "+accelWatchID);
 }
 function clearAccelerationWatch() {

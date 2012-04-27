@@ -5,6 +5,7 @@
 <meta name="viewport" content="target-densitydpi=high-dpi, user-scalable=no" />
 <title>Cordova Sample</title>
 <link href="osp://webapp/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./js/cordova.bada.js"></script>
 <style type="text/css">
 button.btn {
 			color:#050;
@@ -46,6 +47,11 @@ button.btn {
 </head>
 <body>
 	<ul>
+		<li>
+			<h3>Device</h3>
+			<div><button type="button" class="btn" onclick="setDeviceInfo()">DeviceInfo</button></div>
+			<span id="device"></span>
+		</li>
 		<li>
 			<h3>Acceleration</h3>
 			<div>
@@ -126,12 +132,12 @@ button.btn {
 			<div id="preview"></div>
 		</li>
 	</ul>
-<script type="text/javascript" src="./js/capture.js"></script>
+<!--<script type="text/javascript" src="./js/capture.js"></script>
 <script type="text/javascript" src="./js/notification.js"></script>
 <script type="text/javascript" src="./js/connection.js"></script>
 <script type="text/javascript" src="./js/accelerometer.js"></script>
 <script type="text/javascript" src="./js/compass.js"></script>
-<script type="text/javascript" src="./js/device.js"></script>
+<script type="text/javascript" src="./js/device.js"></script>-->
 <script type="text/javascript" src="./js/sample.js"></script>
 </body>
 </html>
