@@ -8,7 +8,7 @@
     <Vendor/>
     <Description/>
     <Icons>
-        <MainMenu>cordova_bada_wac_type4.png<Type1/>
+        <MainMenu>cordova_bada_wac_icon_type4.png<Type1/>
             <Type2/>
             <Type3>cordova_bada_wac_icon_type3.png</Type3>
             <Type4>cordova_bada_wac_icon_type4.png</Type4>
